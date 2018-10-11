@@ -23,6 +23,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
+    "axios": "^0.18.0",
     "netlify-lambda": "^1.0.1",
     "prettier": "^1.14.2",
     "simplecaching": "^1.0.2"
