@@ -11,7 +11,7 @@ class Page extends React.Component {
   }
 
   componentDidMount(){
-    fetch("/.netlify/lambda/hello").then(res => res.json())
+    fetch("/.netlify/functions/hello").then(res => res.json())
     .then(json => this.setState({msg: json.msg}));
   }
 
