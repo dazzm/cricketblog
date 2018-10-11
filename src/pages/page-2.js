@@ -10,9 +10,10 @@ class Page extends React.Component {
     this.state = { msg: "waiting..."}
   }
 
-  componentDidMount(){
-    fetch("/.netlify/functions/hello").then(res => res.json())
-    .then(json => this.setState({msg: json.msg}))
+  async componentDidMount(){
+    let res = await fetch("/.netlify/functions/hello")
+    let data = await res.json()
+    this.setState({msg: data.msg})
   }
 
   render() {
