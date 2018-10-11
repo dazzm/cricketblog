@@ -12,20 +12,23 @@ const SecondPage = () => (
 
 class Page extends React.Component {
 
-  constructor(){
-    this.state = { msg: "waiting for server"};
+  constructor(props){
+    super(props);
+    this.state = { msg: "waiting..."};
   }
-  
+
   componentDidMount(){
     fetch("./netlify/lambda/hello").then(res => res.json())
     .then(json => this.setState({msg: json.msg}));
   }
 
   render() {
+    return (
     <div>
-      <h2>msg from server: {this.state.msg}</h2>
+      <h2>msg : {this.state.msg}</h2>
       <SecondPage />
     </div>
+    );
   }
 }
 
