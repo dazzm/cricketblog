@@ -5,5 +5,5 @@ yarn-error.log
 
 # Build directory
 /public
-/lambda
+lambda
 .DS_Store
