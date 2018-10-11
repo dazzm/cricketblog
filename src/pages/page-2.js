@@ -3,13 +3,6 @@ import { Link } from 'gatsby'
 
 import Layout from '../components/layout'
 
-const SecondPage = () => (
-  <Layout>
-    <h1>About Cricket Blog</h1>
-    <Link to="/">Go back to the homepage</Link>
-  </Layout>
-)
-
 class Page extends React.Component {
 
   constructor(props){
@@ -18,16 +11,17 @@ class Page extends React.Component {
   }
 
   componentDidMount(){
-    fetch("/.netlify/functions/hello").then(res => res.json())
+    fetch("/.netlify/lambda/hello").then(res => res.json())
     .then(json => this.setState({msg: json.msg}));
   }
 
   render() {
     return (
-    <div>
+    <Layout>
+      <h1>About Cricket Blog</h1>
       <h2>msg : {this.state.msg}</h2>
-      <SecondPage />
-    </div>
+      <Link to="/">Go back to the homepage</Link>
+    </Layout>
     );
   }
 }
