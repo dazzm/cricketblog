@@ -6,13 +6,13 @@ import Layout from '../components/layout'
 class Page extends React.Component {
 
   constructor(props){
-    super(props);
-    this.state = { msg: "waiting..."};
+    super(props)
+    this.state = { msg: "waiting..."}
   }
 
   componentDidMount(){
     fetch("/.netlify/functions/hello").then(res => res.json())
-    .then(json => this.setState({msg: json.msg}));
+    .then(json => this.setState({msg: json.msg}))
   }
 
   render() {
