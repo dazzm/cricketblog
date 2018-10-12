@@ -24,6 +24,8 @@
   },
   "devDependencies": {
     "axios": "^0.18.0",
+    "dotenv": "^6.1.0",
+    "mongoose": "^5.3.2",
     "netlify-lambda": "^1.0.1",
     "prettier": "^1.14.2",
     "simplecaching": "^1.0.2"
