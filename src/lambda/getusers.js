@@ -6,7 +6,7 @@ exports.handler = async (event, context) => {
     await getDB()
     let user = new User({ name: 'shams '+counter++, email: "dev@daz.com"})
     await user.save()
-    let users = await User.find({}).lean()
+    let users = await User.find()
     let response = { statusCode: 200, body: JSON.stringify(users) }
     return response
 }
