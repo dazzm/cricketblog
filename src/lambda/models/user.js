@@ -1,6 +1,6 @@
 import mongoose from 'mongoose'
 
-const User = mongoose.Model('User', {
+const User = mongoose.model('User', {
     email: String,
     name: String
 })
